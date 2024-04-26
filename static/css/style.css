@@ -11,11 +11,11 @@ body {
     font-family: "Nunito", sans-serif;
     line-height: 1.7;
     color: white;
-    background:deepskyblue;
+    background:rgb(6, 53, 80);
 }
 
 .container {
-    width: 76%;
+    width: 90%;
     margin: 0, auto;
 }
 
@@ -89,4 +89,26 @@ nav {
 
 .menu a:hover {
     color: blueviolet;
+}
+
+
+/* ********************* HEADER ***************** */
+header {
+    position: relative;
+    top: 5rem;
+    overflow: hidden;
+    height: 70vh;
+    margin-bottom: 5rem;
+}
+
+.header__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 5rem;
+    height: 100%;
+}
+
+.left p {
+    margin: 1rem 0 2.4rem;
 }
