@@ -12,6 +12,7 @@ body {
     line-height: 1.7;
     color: white;
     background:rgb(6, 53, 80);
+    padding-left: 3.5rem;
 }
 
 .container {
@@ -60,6 +61,7 @@ img {
     color: white;
 }
 
+/*********** NAV BAR *******************/
 
 nav {
     background: transparent;
@@ -91,6 +93,11 @@ nav {
     color: blueviolet;
 }
 
+.window-scroll {
+    background: rgb(1, 78, 167);
+    box-shadow: 0 1rem 2rem rgb(39, 37, 44);
+    ;
+}
 
 /* ********************* HEADER ***************** */
 header {
@@ -111,4 +118,98 @@ header {
 
 .left p {
     margin: 1rem 0 2.4rem;
+}
+
+.icon-img {
+    width: 50px; 
+    height: auto; 
+}
+
+
+/* ************************* CATEGORIES ***************************/
+.categories {
+    background:rgba(89, 97, 247, 0.589);
+    padding-left: 3.5rem; 
+    padding-right: 3.5rem;
+    height: 40rem;
+}
+
+.categories h1 {
+    line-height: 1;
+    margin-bottom: 3rem;
+}
+
+.categories__containers {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 5rem;
+}
+
+.categories__left p {
+    margin: 1rem 0 3rem;
+}
+
+.categories__right {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.category {
+    background:rgba(89, 97, 247, 0.589);
+    padding: 1.2rem;
+    border-radius: 2rem;
+    transition: all 400ms ease;
+}
+
+.category:hover {
+    box-shadow: 0 2rem 3rem rgb(89, 124, 240);
+}
+
+.category__icon {
+    background: rgb(101, 71, 207);
+    padding: 1.5rem;
+    border-radius: 0.9rem;
+}
+
+.category h5 {
+    margin: 0.5rem 0 1rem;
+}
+
+.category p {
+    font-size: 0.8rem;
+}
+
+
+/* ***********************POPULAR SUBJECT ********************/
+
+.courses {
+    
+}
+
+.courses__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.course {
+    background: rgb(83, 81, 223);
+    text-align: center;
+    border: 1px solid transparent;
+    transition:  400ms ease;
+}
+
+.course:hover {
+    background: transparent;
+    border-color: rgb(23, 23, 233);
+}
+
+.course_info {
+    padding: 1.5rem;
+}
+
+.course_info p {
+    margin: 1.2rem 0 2rem;
+    font-size: 0.9rem;
 }
