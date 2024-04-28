@@ -11,13 +11,13 @@ body {
     font-family: "Nunito", sans-serif;
     line-height: 1.7;
     color: white;
-    background:rgb(6, 53, 80);
-    padding-left: 3.5rem;
+    background: #070f2b;    
+   
 }
 
 .container {
     width: 90%;
-    margin: 0, auto;
+    margin: 0 auto;
 }
 
 section {
@@ -94,7 +94,7 @@ nav {
 }
 
 .window-scroll {
-    background: rgb(1, 78, 167);
+    background: #9290C3;
     box-shadow: 0 1rem 2rem rgb(39, 37, 44);
     ;
 }
@@ -128,7 +128,7 @@ header {
 
 /* ************************* CATEGORIES ***************************/
 .categories {
-    background:rgba(89, 97, 247, 0.589);
+    background: #1B1A55;
     padding-left: 3.5rem; 
     padding-right: 3.5rem;
     height: 40rem;
@@ -156,7 +156,7 @@ header {
 }
 
 .category {
-    background:rgba(89, 97, 247, 0.589);
+    background:rgba(96, 104, 247, 0.836);
     padding: 1.2rem;
     border-radius: 2rem;
     transition: all 400ms ease;
@@ -194,7 +194,7 @@ header {
 }
 
 .course {
-    background: rgb(83, 81, 223);
+    background: rgba(96, 104, 247, 0.836);
     text-align: center;
     border: 1px solid transparent;
     transition:  400ms ease;
@@ -212,4 +212,121 @@ header {
 .course_info p {
     margin: 1.2rem 0 2rem;
     font-size: 0.9rem;
+}
+
+
+/* **************** FAQ ***************** */
+
+.faqs {
+    background: #1B1A55;
+    
+}
+
+.faq_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.faq {
+    padding: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    height: fit-content;
+    background:  rgba(96, 104, 247, 0.836);
+    cursor: pointer;
+}
+
+.faq h4 {
+    font-size: 1rem;
+    line-height: 2.2;
+}
+
+.faq p {
+    margin-top: 0.9rem;
+    display: none;
+}
+
+.faq.open {
+    display: block;
+}
+
+/************************TESTIMONIALS*******************/
+
+.testimonials_container {
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 5rem;
+}
+
+.avatar {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1rem;
+    border: 1rem solid rgb(141, 129, 243);
+}
+
+.testimonial_info {
+    text-align: center;
+}
+
+.testimonial_body {
+    background:  rgba(96, 104, 247, 0.836);
+    padding: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.testimonial_body::before {
+    content: "";
+    display: block;
+    background: linear-gradient(transparent, rgba(96, 104, 247, 0.836),  rgba(96, 104, 247, 0.836));
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    left: 50%;
+    top: -1.5rem;
+    transform: rotate(45deg);
+}
+
+/************FOOTER*******************/
+
+footer {
+    background:  rgba(96, 104, 247, 0.836);
+    padding-top: 5rem;
+    font-size: 0.9rem;
+}
+
+.footer_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5rem;
+}
+
+.footer_container > div h4 {
+    margin-bottom: 1.2rem;
+}
+
+.footer_1 p {
+    margin: 0 0 2rem;
+}
+
+footer ul li {
+    margin-bottom: 0.7rem;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+
+}
+
+.footer_copyright {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 1.2rem 0;
+    border-top: 1px solid red;
 }
