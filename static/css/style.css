@@ -127,6 +127,7 @@ header {
 
 
 /* ************************* CATEGORIES ***************************/
+
 .categories {
     background: #1B1A55;
     padding-left: 3.5rem; 
@@ -164,12 +165,6 @@ header {
 
 .category:hover {
     box-shadow: 0 2rem 3rem rgb(89, 124, 240);
-}
-
-.category__icon {
-    background: rgb(101, 71, 207);
-    padding: 1.5rem;
-    border-radius: 0.9rem;
 }
 
 .category h5 {
