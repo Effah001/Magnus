@@ -10,7 +10,7 @@ class User(db.Model, UserMixin):
     password = db.Column(db.String(256), nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
     created_at = db.Column(db.DateTime, nullable=False, default=datetime.now)
-    is_active =db.Column(db.Boolean(), default=True)
+    is_active = db.Column(db.Boolean(), default=True)
 
     def __repr__(self):
         """

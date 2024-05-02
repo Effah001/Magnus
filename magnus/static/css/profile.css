@@ -1,13 +1,16 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f2f2f2;
-    margin: 0;
+	display: flex;
+	justify-items: center;
+	margin: 0;
     padding: 0;
 }
 
 .container {
-    max-width: 800px;
-    margin: 50px auto;
+    width: 80%;
+	text-align: center;
+    margin: 0 auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
@@ -28,15 +31,36 @@ h1 {
     border-radius: 5px;
 }
 
+.profile {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #007bff;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 5px;
+	margin-top: 20px;
+ }
+
+
 .logout-link:hover {
     background-color: #0056b3;
 }
 
+.profile:hover {
+	background-color: #0056b3;
+}
+
+.delete {
+	display: inline-block;
+	padding: 10px 20px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
 
  /* Style the delete button */
 .delete-btn {
-	background-color: #ff6347; /* Red color */
-	color: white;
+	background-color: red;
+	color: red;
 	border: none;
     padding: 10px 20px;
     border-radius: 5px;

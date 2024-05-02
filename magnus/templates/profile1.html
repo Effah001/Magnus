@@ -1,0 +1,35 @@
+<!-- profile.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}">
+</head>
+<body>
+    <header>
+        <h1>User Profile</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Welcome, {{ current_user.username }}</h2>
+            <p>Email: {{ current_user.email }}</p>
+            <p>Joined: {{ current_user.created_at }}</p>
+        </section>
+    </main>
+	<a href="{{ url_for('logout') }}" class="logout-link">Logout</a>
+
+	<a href="{{ url_for('update_profile') }}" class="profile">Update Profile</a>
+
+    
+	<form action="{{ url_for('delete_account') }}" method="POST" onsubmit="return confirm('Are you sure you want to delete your account? This action cannot be undone.')">
+        <button type="submit" class="delete">Delete Account</button>
+    </form>
+	
+	<footer>
+        <p>&copy; 2024 Magnus. All rights reserved.</p>
+    </footer>
+</body>
+</html>
