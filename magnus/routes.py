@@ -8,10 +8,13 @@ from flask_login import login_required, current_user, logout_user
 
 
 @app.route('/')
+@app.route('/login')
+def index():
+    return render_template('login.html')
+
 @app.route('/home')
 def home():
     return render_template('home.html')
-
 
 @app.route('/about')
 def about():
@@ -81,8 +84,8 @@ def login():
                 # Log in the user and create a session
                 login_user(user)
 
-                # Redirect to the profile page or any other protected page
-                return redirect(url_for('profile'))
+                # Redirect to the home page or any other protected page
+                return redirect(url_for('home'))
 
         # If login fails, display an error message
         flash('Invalid username or password. Please try again.', 'error')
@@ -131,3 +134,24 @@ def logout():
     logout_user()
     flash('You have been logged out.', 'success')
     return redirect(url_for('login'))
+
+
+@app.route('/delete_account', methods=['POST'])
+@login_required
+def delete_account():
+    if request.method == 'POST':
+        # Retrieve the current user
+        user = current_user
+
+        # Delete the user from the database
+        db.session.delete(user)
+        db.session.commit()
+
+        # Log out the user (optional)
+        logout_user()
+
+        # Redirect the user to the login page
+        return redirect(url_for('login'))
+
+    # Handle GET request if necessary
+    return redirect(url_for('profile'))  # Redirect to profile page if accessed via GET

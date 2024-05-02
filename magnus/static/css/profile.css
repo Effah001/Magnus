@@ -32,3 +32,19 @@ h1 {
     background-color: #0056b3;
 }
 
+
+ /* Style the delete button */
+.delete-btn {
+	background-color: #ff6347; /* Red color */
+	color: white;
+	border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+   	cursor: pointer;
+    font-size: 16px;
+	}
+
+/* Style the delete button on hover */
+.delete-btn:hover {
+	background-color: #ff473d; /* Darker red color */
+	}
