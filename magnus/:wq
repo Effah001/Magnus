@@ -90,37 +90,27 @@ def login():
     return render_template('login.html')
 
 
-@app.route('/profile/update', methods=['GET', 'POST'])
+@app.route('/profile/update', methods=['POST'])
 @login_required
 def update_profile():
-    if request.method == 'POST':
-        new_username = request.form.get('new_username')
-        new_email = request.form.get('new_email')
-        new_password = request.form.get('new_password')
+    username = request.form.get('username')
+    email = request.form.get('email')
+    new_password = request.form.get('new_password')
 
-        # Get the current user
-        user = current_user
+    user = User.query.get(current_user.id)
 
-        print("Old Username:", user.username)
+    # Update username if provided
+    if username:
+        user.username = username
 
-        # Update the user's information if new values are provided
-        if new_username:
-            user.username = new_username
-        if new_email:
-            user.email = new_email
-        if new_password:
-            # Hash the new password
-            hashed_password = bcrypt.generate_password_hash(new_password).decode('utf-8')
-            user.password = hashed_password
-        
-        print("New Username:", user.username)
+    # Update email if provided
+    if email:
+        user.email = email
 
-        # Commit the changes to the database
-        db.session.commit()
+    # Update password if provided
+    if new_password:
+        user.password = generate_password_hash(new_password)
 
-        # Redirect the user back to their profile page
-        return redirect(url_for('profile'))
-
-    # Render the update profile form
-    return render_template('update.html')
-
+    db.session.commit()
+    flash('Profile updated successfully.', 'success')
+    return redirect(url_for('profile'))

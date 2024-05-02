@@ -1,0 +1,26 @@
+<!-- profile.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>User Profile</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Welcome, {{ current_user.username }}</h2>
+            <p>Email: {{ current_user.email }}</p>
+            <p>Joined: {{ current_user.created_at }}</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Magnus. All rights reserved.</p>
+    </footer>
+</body>
+</html>
