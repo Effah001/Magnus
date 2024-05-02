@@ -4,7 +4,7 @@ from werkzeug.security import generate_password_hash
 from magnus import app, db
 from magnus.models import User
 from magnus import bcrypt
-from flask_login import login_required, current_user
+from flask_login import login_required, current_user, logout_user
 
 
 @app.route('/')
@@ -124,3 +124,10 @@ def update_profile():
     # Render the update profile form
     return render_template('update.html')
 
+
+@app.route('/logout')
+@login_required
+def logout():
+    logout_user()
+    flash('You have been logged out.', 'success')
+    return redirect(url_for('login'))
