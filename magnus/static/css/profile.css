@@ -1,25 +1,48 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-	display: flex;
-	justify-items: center;
+*{
 	margin: 0;
-    padding: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+body {
+	background-color: grey;
+	font-family: Arial, sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+
+	min-height: 100vh;
+	margin: 0;
 }
 
 .container {
-    width: 80%;
+	background-color: rgba(44, 133, 242, 0.5);
+	border-radius: 15px;
+	box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
+	color: white;
+	position: relative;
+	width: 50%;
+	height: 500px;
 	text-align: center;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	padding: 30px;
+	margin: 0 auto;
+}
+
+.cont {
+	position: relative;
 }
 
 h1 {
-    text-align: center;
     color: #333;
+	font-size: 40px;
+	text-align: center;
+}
+
+h2 {
+	padding-top: 10px;
+	padding-bottom: 20px;
 }
 
 .logout-link {
@@ -50,25 +73,38 @@ h1 {
 	background-color: #0056b3;
 }
 
+section {
+    margin-bottom: 20px; 
+}
+
+section p {
+    margin-bottom: 30px; 
+}
+
+/*
 .delete {
 	display: inline-block;
 	padding: 10px 20px;
 	margin-bottom: 20px;
-	margin-top: 20px;
-}
-
- /* Style the delete button */
-.delete-btn {
+	margin-top: 40px;
 	background-color: red;
-	color: red;
+}
+*/
+ /* Style the delete button */
+.delete {
+	background-color: red;
+	display: inline-block;
+	color: black;
 	border: none;
     padding: 10px 20px;
     border-radius: 5px;
    	cursor: pointer;
     font-size: 16px;
+	margin-top: 30px;
+	margin-bottom: 20px;
 	}
 
 /* Style the delete button on hover */
-.delete-btn:hover {
+.delete:hover {
 	background-color: #ff473d; /* Darker red color */
 	}

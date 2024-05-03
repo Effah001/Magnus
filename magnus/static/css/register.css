@@ -32,7 +32,6 @@ body {
 	position: relative;
 }
 
-
 .input-group input {
 	width: 100%;
 	height: 100%;
@@ -74,13 +73,13 @@ body {
 .login-container .register-link {
 	font-size: 17px;
 	text-align: center;
-	margin-top: 20px;
+	margin-top: 40px;
 }
 
 .register-link p a {
 	color: white;
 	font-weight: 600;
-	#text-decoration: none;
+	text-decoration: none;
 }
 
 .register-link p a {
