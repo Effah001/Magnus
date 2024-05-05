@@ -11,7 +11,7 @@ body {
     font-family: "Nunito", sans-serif;
     line-height: 1.7;
     color: white;
-    background: #070f2b;    
+    background: violet;    
    
 }
 
@@ -113,7 +113,7 @@ header {
 }
 
 .header__container {
-    display: grid;
+	display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 5rem;
@@ -121,7 +121,7 @@ header {
 }
 
 .left p {
-    margin: 1rem 0 2.4rem;
+    margin: 1rem 0 3rem;
 }
 
 .icon-img {
@@ -132,53 +132,56 @@ header {
 
 /* ************************* CATEGORIES ***************************/
 
+/* Section styles */
+section {
+    padding-top: 4rem;
+}
+
+.catchphrase {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
 .categories {
-    background: #1B1A55;
-    padding-left: 3.5rem; 
-    padding-right: 3.5rem;
-    height: 40rem;
-}
-
-.categories h1 {
-    line-height: 1;
-    margin-bottom: 3rem;
-}
-
-.categories__containers {
-    display: grid;
-    grid-template-columns: 40% 60%;
-    gap: 5rem;
-}
-
-.categories__left p {
-    margin: 1rem 0 3rem;
-}
-
-.categories__right {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-}
-
-.category {
-    background:rgba(96, 104, 247, 0.836);
-    padding: 1.2rem;
-    border-radius: 2rem;
-    transition: all 400ms ease;
+	padding-left: 4rem;
+	padding-right: 4rem;
+	height: 40rem;
 }
 
 .category:hover {
     box-shadow: 0 2rem 3rem rgb(89, 124, 240);
 }
 
-.category h5 {
-    margin: 0.5rem 0 1rem;
+.subject-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+	justify-content: center;
+	text-align: center;
 }
 
-.category p {
-    font-size: 0.8rem;
+
+.subject-box {
+    background-color: rgb(14, 70, 163);
+    padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
 }
 
+.subject-box:hover {
+    transform: translateY(-5px);
+}
+
+.subject-box img {
+    width: 100px;
+    height: 100px;
+}
+
+.subject-box h3 {
+    margin-bottom: 10px;
+}
 
 /* ***********************POPULAR SUBJECT ********************/
 
@@ -292,40 +295,61 @@ header {
     transform: rotate(45deg);
 }
 
+
+
+
+
+
 /************FOOTER*******************/
 
 footer {
-    background:  rgba(96, 104, 247, 0.836);
-    padding-top: 5rem;
-    font-size: 0.9rem;
+    background-color: rgb(30, 3, 66);
+    color: white;
+    padding: 20px 0;
 }
 
-.footer_container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 5rem;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.footer_container > div h4 {
-    margin-bottom: 1.2rem;
+.footer-content {
+    display: flex;
+    align-items: center;
 }
 
-.footer_1 p {
-    margin: 0 0 2rem;
+.footer-logo img {
+    width: 100px;
 }
 
-footer ul li {
-    margin-bottom: 0.7rem;
+.footer-links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
 
-footer ul li a:hover {
-    text-decoration: underline;
-
+.footer-links ul li {
+    margin-right: 20px;
 }
 
-.footer_copyright {
-    text-align: center;
-    margin-top: 4rem;
-    padding: 1.2rem 0;
-    border-top: 1px solid red;
+.footer-links ul li:last-child {
+    margin-right: 0;
 }
+
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-info p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+
