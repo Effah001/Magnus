@@ -1,0 +1,131 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+body {
+	background: #070f2b; 
+	font-family: "Nunito", sans-serif;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/******************Navbar***************/
+nav {
+	/*background: rgba(96, 104, 247, 0.8);*/
+    width: 100vw;
+    height: 5rem;
+    position: fixed;
+    top: 0;
+    z-index: 11;
+} 
+
+.nav_container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*
+.nav_container h4 {
+	margin: 0;
+	color: white;
+	font-size: 24px;
+	text-transform: uppercase;
+}
+*/
+.menu {
+	list-style: none;
+	display: flex;
+	gap: 3rem;
+}
+
+.menu a {
+    font-size: 0.9rem;
+    transition: all 400ms ease;
+	color: white;
+}
+
+.menu a:hover {
+    color: blueviolet;
+}
+
+ul {
+    list-style: none;
+}
+
+/*****************Profile container *******************/
+.profile_container {
+	background-color: rgba(96, 104, 247, 0.5);
+	border-radius: 15px;
+	box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
+	color: white;
+	position: relative;
+	width: 50%;
+	height: 500px;
+	text-align: center;
+	padding: 30px;
+	margin-top: 100px;
+
+}
+
+.cont {
+	position: relative;
+}
+
+h1 {
+    color: #333;
+	font-size: 40px;
+	text-align: center;
+}
+
+h2 {
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+
+.logout-link, .profile {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #007bff;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 5px;
+	margin-top: 20px;
+}
+
+.logout-link:hover, .profile:hover {
+	background-color: #0056b3;
+}
+
+section {
+	margin-bottom: 20px; 
+}
+
+section p {
+	margin-bottom: 30px; 
+}
+
+.delete {
+	background-color: red;
+	display: inline-block;
+	color: black;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 16px;
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+.delete:hover {
+	background-color: #ff473d; /* Darker red color */
+}
+

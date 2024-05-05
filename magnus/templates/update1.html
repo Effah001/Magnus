@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Profile</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/update1.css') }}">
+</head>
+<body>
+    <nav>
+        <div class="container nav_container">
+          <a href="/home"><h4>SCIENCELINX</h4></a>
+          <ul class="menu">
+            <li><a href="/home">Home</a></li>
+            <li><a href="/courses">Courses</a></li>
+            <li><a href="/quizzes">Quizzes</a></li>
+            <li><a href="/profile">Profile</a></li>
+			<li><a href="/about">About</a></li>
+			<li><a href="/login">Login</a></li>
+          </ul>
+        </div>
+    </nav>
+	<div class="profile">
+    <h1>Update Profile</h1>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <form action="{{ url_for('update_profile') }}" method="POST">
+        <label for="new_username">Username:</label>
+        <input type="text" name="new_username" id="new_username" value="{{ current_user.username }}" required><br>
+        <label for="email">Email:</label>
+        <input type="email" name="new_email" id="new_email" value="{{ current_user.email }}" required><br>
+        <label for="new_password">New Password:</label>
+        <input type="password" name="new_password" id="new_password" required><br>
+        <button type="submit">Update Profile</button>
+    </form>
+	</div>
+	<!-- Footer -->
+  <footer class="footer">
+      <div class="container footer_container">
+        <div class="footer_1">
+          <a href="index.html" class="footer_logo"><h4>SCIENCELINX</h4></a>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Esse alias quis exercitationem illum incidunt dolorum officia,
+            dolorem voluptatum quo delectus?
+          </p>
+        </div>
+
+        <div class="footer_2">
+          <h4> Permalinks </h4>
+          <ul class="Permalinks">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="Resources.html">Resources</a></li>
+            <li><a href="quizzes.html">Quizzes</a></li>
+          </ul>
+        </div>
+
+        <div class="footer_3">
+          <h4> Privacy </h4>
+          <ul class="privacy">
+            <li><a href="a">Privacy Policy</a></li>
+            <li><a href="a">Terms and conditions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer_4">
+          <h4> Contact Us</h4>
+          <div>
+            <p>+23354673739</p>
+            <p>Sciencelinx@gmail.com</p>
+          </div>
+
+        </div>
+
+        <div class="footer_copyright">
+          <small>Copyright &copy; Sciencelinx</small>
+        </div>
+
+      </div>
+    </footer>
+
+</body>
+</html>
+

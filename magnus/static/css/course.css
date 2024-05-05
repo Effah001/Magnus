@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.course {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px; /* Adjust spacing between courses */
+}
+
+.course__image {
+  flex: 1;
+  overflow: hidden;
+}
+
+.course__image img {
+  width: 100%; /* Ensure images fill their container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.course_info {
+  flex: 1;
+  padding: 20px;
+  background-color: #f9f9f9; /* Add a background color to visually separate content */
+}
+
+.course_info h4,
+.course_info p {
+  margin-bottom: 10px;
+}
+
+.course_info p:last-child {
+  margin-bottom: 0; /* Remove bottom margin for last paragraph */
+}
+
+.btn-primary {
+  align-self: flex-start; /* Align button to the start of the container */
+}
+

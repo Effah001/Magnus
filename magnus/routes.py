@@ -23,7 +23,7 @@ def about():
 
 @app.route('/courses')
 def courses():
-    return render_template('courses.html')
+    return render_template('courses1.html')
 
 
 @app.route('/quizzes')
@@ -125,7 +125,7 @@ def update_profile():
         return redirect(url_for('profile'))
 
     # Render the update profile form
-    return render_template('update.html')
+    return render_template('update1.html')
 
 
 @app.route('/logout')
