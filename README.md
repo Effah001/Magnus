@@ -30,7 +30,7 @@ ScholarNet aims to make learning more accessible and engaging for students by of
  
  ### Installation
 
- 1. Clone the repository:
+Clone the repository:
 
     git clone https://github.com/Effah001/ScholarNet
 
@@ -40,7 +40,7 @@ ScholarNet aims to make learning more accessible and engaging for students by of
 
 To activate the virtual environment
 
-    * On Unix
+    On Unix
 
  source venv/bin/activate
 
