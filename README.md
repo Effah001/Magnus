@@ -18,6 +18,17 @@ ScholarNet is an educational platform designed to provide students with access t
 
 ScholarNet aims to make learning more accessible and engaging for students by offering a diverse selection of topics spanning different subjects such as physics, chemistry, biology, mathematics, and more. In addition to topics, ScholarNet also provides quizzes to test students' understanding and reinforce their knowledge.
 
-## Introduction
+## Features
 
-Magnus aims to make learning more accessible and engaging for students by offering a diverse selection of courses spanning different subjects such as physics, chemistry, biology, mathematics, and more. In addition to courses, Magnus also provides quizzes to test students' understanding and reinforce their knowledge.
+   * Course Catalog: Browse through a wide range of courses available on various subjects.
+   * Quiz Section: Access quizzes to assess your understanding of different topics.
+   * User Profiles: Create and manage user profiles to track progress and achievements.
+
+## Getting Started
+
+ Follow these instructions to get started with Magnus on your local machine.
+ 
+ ### Installation
+
+ Clone the repository:
+ git clone https://github.com/Effah001/ScholarNet
