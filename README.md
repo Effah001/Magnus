@@ -47,7 +47,7 @@ To activate the virtual environment
 
 Navigate to the project directory
 
-    cd Magnus
+    cd ScholarNet
 
 Install dependencies
 
