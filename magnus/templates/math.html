@@ -25,7 +25,12 @@
     <section class="topics">
         <h2>MATHEMATICS</h2>
     	<div class="container topic-grid">
-        	
+			{% for topic in math_topics %}
+            <div class="math-topic">
+                <h3>{{ topic.name }}</h3>
+                <p>{{ topic.description }}</p>
+            </div>
+            {% endfor %}
         </div>
     </section>
 

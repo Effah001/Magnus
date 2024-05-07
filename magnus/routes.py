@@ -8,9 +8,8 @@ from flask_login import login_required, current_user, logout_user
 
 
 @app.route('/')
-@app.route('/login')
 def index():
-    return render_template('login.html')
+    return render_template('home.html')
 
 @app.route('/home')
 def home():
@@ -33,6 +32,32 @@ def quizzes():
 @app.route('/profile')
 def profile():
     return render_template('profile.html')
+
+@app.route('/math')
+def math_topics():
+    math_topics = [
+        {"name": "Algebra", "description": "Explore the fundamental concepts of algebra, including equations, polynomials, and functions."},
+        {"name": "Geometry", "description": "Discover the properties and relationships of shapes, angles, and spatial structures in geometry."},
+        {"name": "Calculus", "description": "Delve into the study of rates of change and accumulation, fundamental to understanding motion and change in mathematics."},
+        {"name": "Trigonometry", "description": "Study relationships between side lengths and angles of triangles."},
+        {"name": "Statistics", "description": "Explore the collection, analysis, interpretation, and presentation of data."},
+        {"name": "Number Theory", "description": "Investigate properties and relationships of numbers, especially integers."},
+        {"name": "Linear Algebra", "description": "Examine vectors, vector spaces, linear transformations, and systems of linear equations."},
+        {"name": "Differential Equations", "description": "Study equations that describe the rates of change of a function."},
+        {"name": "Discrete Mathematics", "description": "Explore mathematical structures that are fundamentally discrete rather than continuous."},
+        {"name": "Topology", "description": "Examine properties of space that are preserved under continuous deformations, such as stretching, crumpling, and bending, but not tearing or gluing."},
+        {"name": "Probability Theory", "description": "Study the mathematical framework for modeling uncertain events."},
+        {"name": "Mathematical Analysis", "description": "Examine the theory of functions of a real variable and includes, among other things, the concepts of continuity, limits, derivatives, and integrals."},
+        {"name": "Graph Theory", "description": "Study the mathematical structures used to model pairwise relations between objects."},
+        {"name": "Numerical Analysis", "description": "Explore the algorithms and numerical methods used to solve mathematical problems."},
+        {"name": "Combinatorics", "description": "Investigate counting, arrangement, and combination of objects."},
+        {"name": "Mathematical Logic", "description": "Study formal systems in mathematics that consist of formal languages for formalizing mathematical statements."},
+        {"name": "Game Theory", "description": "Examine mathematical models of strategic interaction among rational decision-makers."},
+        {"name": "Mathematical Physics", "description": "Explore mathematical methods for solving problems in physics."},
+        {"name": "Complex Analysis", "description": "Study the analysis of functions of complex numbers, including complex derivatives and integrals."},
+        {"name": "Set Theory", "description": "Examine the mathematical study of collections of objects, such as numbers or functions."}
+    ]
+    return render_template("math.html", math_topics=math_topics)
 
 
 @app.route('/register', methods=['GET', 'POST'])

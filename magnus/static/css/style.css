@@ -156,6 +156,7 @@ header {
     transform: translateY(-5px);
 	background: transparent;
 	border-color: rgb(23, 23, 233);
+	cursor: pointer;
 
 }
 
