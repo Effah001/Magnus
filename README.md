@@ -31,4 +31,5 @@ ScholarNet aims to make learning more accessible and engaging for students by of
  ### Installation
 
  Clone the repository:
- git clone https://github.com/Effah001/ScholarNet
+
+ 'git clone https://github.com/Effah001/ScholarNet'
