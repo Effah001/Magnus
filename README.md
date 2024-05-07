@@ -40,32 +40,32 @@ Clone the repository:
 
 To activate the virtual environment
 
-    On Unix
+ On Unix
 
- source venv/bin/activate
+    source venv/bin/activate
 
 
- 2. Navigate to the project directory
+Navigate to the project directory
 
     cd Magnus
 
- 3. Install dependencies
+Install dependencies
 
-     pip install -r requirements.txt
+    pip install -r requirements.txt
 
 ## Usage
-1. Run Application
+Run Application
    
-   python3 run.py
+    python3 run.py
 
 2. Open your web browser and navigate to http://localhost:5000 to access ScholarNet.
 
 ## Technologies Used
 
-    * Flask
-    * HTML
-    * CSS
-    * Javascript
+   * Flask
+   * HTML
+   * CSS
+   * Javascript
 
 ## Contributing
 
