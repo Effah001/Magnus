@@ -8,12 +8,9 @@ from flask_login import login_required, current_user, logout_user
 
 
 @app.route('/')
-def index():
-    return render_template('home.html')
-
 @app.route('/home')
 def home():
-    return render_template('home.html')
+    return render_template('index.html')
 
 @app.route('/about')
 def about():
@@ -32,6 +29,7 @@ def quizzes():
 @app.route('/profile')
 def profile():
     return render_template('profile.html')
+
 
 @app.route('/math')
 def math_topics():
